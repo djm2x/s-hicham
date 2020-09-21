@@ -1,0 +1,31 @@
+{
+  "name": "latest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install": "dotnet restore && cd angular && npm i",
+    "f": "cd angular && ng serve --port 4201",
+    "reverse": "dotnet ef dbcontext scaffold 'data source=DESKTOP-3550K4L\\HARMONY;database=rfid;user id=sa; password=123' Microsoft.EntityFrameworkCore.SqlServer -o Model -c 'MyContext'",
+    "m0": "dotnet ef migrations add first && dotnet ef database drop -f && dotnet ef database update && dotnet watch run",
+    "m": "dotnet ef migrations add first && dotnet ef database update && dotnet watch run",
+    "b": "dotnet watch run",
+    "f-p": "cd angular && ng build --prod",
+    "b-p": "dotnet publish -o D:/MarIT/GestionCommerciale/deploy",
+    "ci": "npm run f-p && npm run push",
+    "prod": "npm run prod-front && npm run prod-back",
+    "init": "git init && git remote add origin https://github.com/djm2x/s-hicham.git",
+    "init2": "git init && git remote add origin https://github.com/TamikaElmahdi/mem.git",
+    "cmt": "git add . && git commit -m \"commit\"",
+    "push": "npm run cmt && git push -u origin master",
+    "pull": "git pull",
+    "git-login": "git config --global user.email",
+    "git": "npm run f-git-cm && npm run b-git-cm",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+  }
+}

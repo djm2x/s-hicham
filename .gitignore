@@ -1,0 +1,15 @@
+
+
+**/dist
+**/e2e
+**/.vscode
+**/node_modules
+**/deploy
+**/deploy.rar
+# **/wwwroot
+**/bin
+**/obj
+
+*.rar
+**/doc
+**/~$suivi.xlsx
